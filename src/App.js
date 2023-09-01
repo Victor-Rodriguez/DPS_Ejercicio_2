@@ -9,6 +9,7 @@ function App() {
   const [ingredienteAdd, setIngredienteAdd] = useState(0)
   const [costoAdicional, setCostoAdicional] = useState(0)
   const [total, setTotal] = useState(0)
+  const [costoIngreAdd, setCostoIngreAdd] = useState(0)
 
   return (
     <div className="container">
@@ -25,9 +26,11 @@ function App() {
         setCostoAdicional={setCostoAdicional}
         total={total}
         setTotal={setTotal}
+        costoIngreAdd={costoIngreAdd}
+        setCostoIngreAdd={setCostoIngreAdd}
       />
 
-      <Results
+      {/* <Results
         nombreCliente={nombreCliente}
         setNombreCliente={setNombreCliente}
         tamanioPizza={tamanioPizza}
@@ -40,7 +43,9 @@ function App() {
         setCostoAdicional={setCostoAdicional}
         total={total}
         setTotal={setTotal}
-      />
+        costoIngreAdd={costoIngreAdd}
+        setCostoIngreAdd={setCostoIngreAdd}
+      /> */}
     </div>
   );
 }

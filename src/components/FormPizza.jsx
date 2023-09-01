@@ -17,25 +17,46 @@ const FormPizza = (props) => {
         setTotal
     } = props;
 
+    const handleChange = e => {
+        e.preventDefault();
+
+        setNombreCliente({[e.target.name]: e.target.value})
+        /* setIngredienteAdd({[e.target.name]: e.target.value})
+        setTamanioPizza({[e.target.name]: e.target.value}) */
+
+        console.log(nombreCliente);
+        /* console.log(tamanioPizza);
+        console.log(ingredienteAdd); */
+    }
+
+
     return (
         <>
-        <div class='container'>
-            <form>
-                <div class="mb-3">
-                    <label for="nombreCliente" class="form-label">Nombre del Cliente:</label>
-                    <input type="text" class="form-control" id="nombreCliente"/>
+            <div class='container'>
+                <h1>Ordene su Pizza</h1>
+                <div class="row justify-content-center">
+                    <form onSubmit={e => e.preventDefault()}>
+                        <div class="mb-3">
+                            <label for="nombreCliente" class="form-label">Nombre del Cliente:</label>
+                            <input type="text" class="form-control" name='nombreCliente'  onChange={handleChange} />
+                        </div>
+                        <div class="mb-3">
+                            <select class="form-select" name='tamanioPizza'  >
+                                <option selected>Seleccione el tamaño</option>
+                                <option value="Personal">Personal</option>
+                                <option value="Mediana">Mediana</option>
+                                <option value="Grande">Grande</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="ingredienteAdd" class="form-label">Ingredientes adicionales</label>
+                            <input type="text" class="form-control" name='ingredienteAdd'  />
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+
                 </div>
-                <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" />
-                </div>
-                <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-        </div>
+            </div>
         </>
     )
 }
