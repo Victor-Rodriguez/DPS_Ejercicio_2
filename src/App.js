@@ -1,6 +1,5 @@
 import { useState } from "react";
 import FormPizza from './components/FormPizza';
-import Results from "./components/Results";
 
 function App() {
   const [nombreCliente, setNombreCliente] = useState('')
@@ -29,23 +28,6 @@ function App() {
         costoIngreAdd={costoIngreAdd}
         setCostoIngreAdd={setCostoIngreAdd}
       />
-
-      {/* <Results
-        nombreCliente={nombreCliente}
-        setNombreCliente={setNombreCliente}
-        tamanioPizza={tamanioPizza}
-        setTamanioPizza={setTamanioPizza}
-        precio={precio}
-        setPrecio={setPrecio}
-        ingredienteAdd={ingredienteAdd}
-        setIngredienteAdd={setIngredienteAdd}
-        costoAdicional={costoAdicional}
-        setCostoAdicional={setCostoAdicional}
-        total={total}
-        setTotal={setTotal}
-        costoIngreAdd={costoIngreAdd}
-        setCostoIngreAdd={setCostoIngreAdd}
-      /> */}
     </div>
   );
 }

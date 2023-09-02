@@ -20,6 +20,7 @@ const FormPizza = (props) => {
         setCostoIngreAdd
     } = props;
 
+    //Eventos de capturas de datos de los inputs
     const handleChangeNombreCliente = e => {
         e.preventDefault();
 
@@ -86,9 +87,6 @@ const FormPizza = (props) => {
         setPrecio(precioPizza)
         setTotal(precioPizza + costoExtra)
 
-        console.log(nombreCliente);
-        console.log(ingredienteAdd);
-        console.log(tamanioPizza);
     }
 
 
