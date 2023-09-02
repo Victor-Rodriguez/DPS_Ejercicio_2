@@ -16,19 +16,20 @@ const Results = (props) => {
         total,
         setTotal,
         costoIngreAdd,
-        setCostoIngreAdd
+        setCostoIngreAdd,
+        errorMessage
     } = props;
 
     return (
         <>
-            <table className="table table-hover" >
+            <table className="table table-hover table-bordered table-primary" >
                 <thead>
                     <tr>
                         <th scope="col">Concepto</th>
                         <th scope="col">Contenido</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody className='table-light'>
                     <tr>
                         <th scope="row">Nombre del cliente</th>
                         <td>{nombreCliente}</td>
